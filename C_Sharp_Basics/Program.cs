@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace C_Sharp_Basics {
     public class Program
@@ -76,13 +77,80 @@ namespace C_Sharp_Basics {
             Console.WriteLine(Convert.ToString(doubNum));
             Console.WriteLine(Convert.ToString(b));
         }
+
+        public static void Operators()
+        {
+            Console.WriteLine("Arithmatic Operator");
+            int x = 10;
+            int y = 20;
+            Console.WriteLine("Addition");
+            Console.WriteLine(x + y);
+            Console.WriteLine("Subtration");
+            Console.WriteLine(x - y);
+            Console.WriteLine("Multiplicaton");
+            Console.WriteLine(x * y);
+            Console.WriteLine("Division");
+            Console.WriteLine(x / y);
+            Console.WriteLine("Modulus");
+            Console.WriteLine(x % y);
+
+            Console.WriteLine("Relational Operators");
+            Console.WriteLine(x == y);
+            Console.WriteLine(x != y);
+            Console.WriteLine(x > y);
+            Console.WriteLine(x < y);
+            Console.WriteLine(x >= y);
+            Console.WriteLine(x <= y);
+
+            Console.WriteLine("Logical Operators");
+            bool b1 = true;
+            bool b2 = false;
+            Console.WriteLine(b1 || b2);
+            Console.WriteLine(b2 && b2);
+            Console.WriteLine(!b1);
+
+            Console.WriteLine("Assignment Operators");
+            int a = 3;
+            a += 5;
+            Console.WriteLine(a);
+            a -= 1;
+            Console.WriteLine(a);
+            a *= 2;
+            Console.WriteLine(a);
+            a /= 2;
+            Console.WriteLine(a);
+            a %= 4;
+            Console.WriteLine(a);
+
+            Console.WriteLine("Increment/Decrement Operators");
+            int b = 10;
+            b++;
+            Console.WriteLine(b);
+            ++b;
+            Console.WriteLine(b);
+            --b;
+            Console.WriteLine(b);
+            b--;
+            Console.WriteLine(b);
+
+            Console.WriteLine("Ternary Operator");
+            int num1 = 10;
+            int num2 = 20;
+            string str = (num1 > num2) ? "num1 is greater" : "num2 is greater";
+            Console.WriteLine(str);
+
+        }
         static void Main(String[] args)
         {
             dataTypes();
             Console.WriteLine("--------------------------------");
-            //Variables();
+            Variables();
             Console.WriteLine("--------------------------------");
             TypeConversion();
+            Console.WriteLine("--------------------------------");
+            Operators();
+
+
 
         }
     }
