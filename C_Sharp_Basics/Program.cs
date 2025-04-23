@@ -50,12 +50,39 @@ namespace C_Sharp_Basics {
             bool boolean = bool.Parse(Console.ReadLine());
             Console.WriteLine(boolean);
         }
+
+        static void TypeConversion()
+        {
+            //Implicit Type conversion
+            Console.WriteLine("Implicit Type conversion");
+            int num = 10;
+            long numLong = num;
+            Console.WriteLine(numLong);
+            Console.WriteLine(numLong.GetType());
+
+            Console.WriteLine("Explicit Type Conversion");
+            long number = 2312354;
+            int myNum = (int)number;
+            Console.WriteLine(myNum);
+            Console.WriteLine(myNum.GetType());
+
+
+            Console.WriteLine("Type Conversion");
+            int numInt = 100;
+            double doubNum = 5.35;
+            bool b = true;
+
+            Console.WriteLine(Convert.ToDouble(numInt));
+            Console.WriteLine(Convert.ToString(doubNum));
+            Console.WriteLine(Convert.ToString(b));
+        }
         static void Main(String[] args)
         {
             dataTypes();
             Console.WriteLine("--------------------------------");
-            Variables();
+            //Variables();
             Console.WriteLine("--------------------------------");
+            TypeConversion();
 
         }
     }
